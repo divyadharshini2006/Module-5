@@ -1,40 +1,62 @@
 # Exp.No:25  
 ## Hierarchical Inheritance
 
----
-
 ### AIM  
-To write a Python program to get the employee and doctor details and display them using hierarchical inheritance. Create a parent (base) class named `Details` and two child (derived) classes named `Employee` and `Doctor`.
-
----
+To Write A Python Program to Calculated Add, Sub, & Mul using Inheritance.
 
 ### ALGORITHM
 
-1. **Begin the program.**
-2. **Create a class Details** with an `__init__` method to initialize three attributes: `id`, `name`, and `gender`.
-3. **Define a method display_details()** to print the values of `id`, `name`, and `gender`.
-4. **Create a class Employee** that inherits from the `Details` class. 
-   - Add two additional attributes: `company` and `department`.
-   - Override the `display_details()` method to print the employee-specific attributes (`company` and `department`) along with the inherited details.
-5. **Create a class Doctor** that also inherits from the `Details` class. 
-   - Add two additional attributes: `hospital` and `department`.
-   - Override the `display_details()` method to print the doctor-specific attributes (`hospital` and `department`) along with the inherited details.
-6. **Accept input** for employee and doctor details.
-7. **Create objects of Employee and Doctor** using the input.
-8. **Call the `display_details()` method** for both objects to print the details.
-9. **Terminate the program.**
-
----
+1. Begin the program.
+2. Define a class Addition with:
+3. An __init__() method to initialize two values a and b.
+4. A method add() that prints the values a, b, and their sum.
+5. Define a class Multiplication that inherits from Addition with:
+6. A method multiply() that prints the values a, b, and their product.
+7. Define a class Subtraction that inherits from Multiplication with:
+8. A method subtract() that prints the values a, b, and their difference.
+9. Take two integer inputs a and b from the user.
+10. Create an object obj of the Subtraction class (which has access to all methods).
+11. Call the add(), multiply(), and subtract() methods on the obj object to display the respective results.
+12.Terminate the program.
 
 ### PROGRAM
 ```
+class Addition:
+    def __init__(self, a, b):
+        self.a = a
+        self.b = b
+    
+    def add(self):
+        print(" Addition value1 : ", self.a)
+        print(" Addition value2 : ", self.b)
+        print(" Added value :", self.a + self.b)
 
+class Multiplication(Addition):
+    def multiply(self):
+        print(" multiplication value1 : ", self.a)
+        print(" multiplication value2 : ", self.b)
+        print(" Multiplied value :", self.a * self.b)
 
+class Subtraction(Multiplication):
+    def subtract(self):
+        print(" subraction value1 : ", self.a)
+        print(" subraction value2 : ", self.b)
+        print("Subracted value :", self.a - self.b)
+
+# Taking input from the user
+a = int(input())
+b = int(input())
+
+# Creating an object of Subtraction class (which has access to all methods)
+obj = Subtraction(a, b)
+obj.add()
+obj.multiply()
+obj.subtract()
 ```
 
 ### OUTPUT  
-
-(Output Screenshot)  
-
+![Screenshot 2025-04-27 165747](https://github.com/user-attachments/assets/5eca765f-8b7a-4288-a791-d36f31eca2b0)
 
 ### RESULT
+Thus a Python Program to Calculated Add, Sub, & Mul using Inheritance has been successfully implemented .
+
